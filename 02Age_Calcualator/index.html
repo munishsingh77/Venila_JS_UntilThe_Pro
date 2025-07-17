@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="../src/output.css" />
     
 </head>
-<body style="background-color: black; color: aliceblue;">
-    <div class="bg" >
-        <label for="birthday">Date of Birth:</label>
-        <input type="date" id="birthday" name="birthday">
+<body class="bg-blue-700 h-screen w-screen flex items-center justify-center" >
+
+         <!-- card -->
+    <div class="bg-amber-600 w-[250px] h-[220px] rounded shadow flex flex-col flex-wrap   ">
+
+            <h1 class=" font-bold flex items-center flex-col text-amber-200  py-2 ">Age Calculator</h1> <br>
+            <input class="text-white px-1 " id ="Birth-Date" type= "date" id="birthday" name="birthday"> <br>
+            <label class="text-white px-1" for="birthday">My Age is :</label> <br>
+        <!-- Button -->
+        <div class=" font-bold flex items-center flex-col  ">
+            <button class="text-white bg-red-800  cursor-pointer px-2 py-1 rounded-sm " id="Calculate-Age"  >
+            Calculate Age
+            </button> 
+        </div>
+        
     </div>
-    <button class="CalculatorAge " style="width: 100px; height: 30px; color: #000;; background-color: aqua; ">
-        Calculate Age
-    </button>
+
     <script src="Age_Calculator.js" defer></script>
 </body>
 </html>
