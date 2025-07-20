@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    
+</head>
+<body class="bg-blue-700 h-screen w-screen flex items-center justify-center" >
+
+         <!-- card -->
+<div class="bg-amber-600 w-[300px] h-[250px] rounded shadow flex flex-col items-center    ">
+
+  <h2>Simple Interest Calculator</h2>
+
+  <div>
+    <label for="principal">Principal Amount (₹):</label>
+    <input type="number" id="principal" placeholder="e.g. 1000" />
+  </div>
+
+  <div>
+    <label for="rate">Rate of Interest (%):</label>
+    <input type="number" id="rate" placeholder="e.g. 5" />
+  </div>
+
+  <div>
+    <label for="time">Time (in years):</label>
+    <input type="number" id="time" placeholder="e.g. 2" />
+  </div><br>
+
+  <div class="flex justify-between items-center">
+    <button class="border rounded px-2 mx-2" id="calculateBtn" type="button">Calculate Interest</button>
+    <button class="border rounded px-2 mx-2" id="clearBtn" type="button">Clear</button>
+  </div>
+
+  <div>
+    <label>Result:</label>
+    <span id="result">--</span>
+  </div>
+</div>
+
+    <script src="interest.js" defer></script>
+</body>
+</html>
