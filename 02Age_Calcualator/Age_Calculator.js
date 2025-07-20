@@ -11,19 +11,25 @@ const calculateAge =  document.querySelector("#Calculate-Age");
  
 function toGetcurrentAge() {
     const dateOfbirth = document.querySelector("#Birth-Date").value;
-    const userDate = new Date(dateOfbirth);
-    const year = userDate.getMilliseconds();
-    
-    
+    const birthDayYear = new Date(dateOfbirth);
     const today = new Date();
-    const day = today.getMilliseconds();
     
-     currentAge = day - year ;
-    console.log(currentAge);
+    let currentAge = today.getFullYear() - birthDayYear.getFullYear();
+    
+    const m = today.getMonth() - birthDayYear.getMonth();
+   
 
-   const exactAge = document.querySelector("label");
-     exactAge.textContent = "My Age is : " + currentAge;
-} 
+  if (m < 0 || (m === 0 && today.getDate() < birthDayYear.getDate())) {
+    currentAge--; 
+  } 
+    
+
+    const exactAge = document.querySelector("label");
+    exactAge.textContent = "My Age is : " + currentAge;
+
+    alert("My Age is : " + currentAge);
+
+  } 
 
 calculateAge.addEventListener("click", toGetcurrentAge);
 
