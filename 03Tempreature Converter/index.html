@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    
+</head>
+<body class="bg-blue-700 h-screen w-screen flex items-center justify-center" >
+
+         <!-- card -->
+    <div class="bg-amber-600 w-[300px] h-[300px] rounded shadow flex flex-col items-center    ">
+
+            <h1 class="">Temperature Calculator</h1>
+
+  <div class="flex flex-wrap flex-col items-start" id="tempForm">
+    <!-- Input Temperature -->
+    <label class="" id="Tmp"   for="tempValue">Enter Temperature:</label>
+    <input  class="border"type="number" id="tempValue" name="tempValue" required>
+
+    <!-- From Unit -->
+    <label for="fromUnit">From:</label>
+    <select class="flex border cursor-pointer" id="fromUnit" name="fromUnit">
+      <option class="" value="celsius">Celsius (°C)</option>
+      <option class="" value="fahrenheit">Fahrenheit (°F)</option>
+      <option class="" value="kelvin">Kelvin (K)</option>
+    </select>
+
+    <!-- To Unit -->
+    <label class="" for="toUnit">To:</label>
+    <select class="flex border rounded cursor-pointer" id="toUnit" name="toUnit">
+      <option class="" value="fahrenheit">Fahrenheit (°F)</option>
+      <option class="" value="celsius">Celsius (°C)</option>
+      <option class="" value="kelvin">Kelvin (K)</option>
+    </select>
+    <br>
+
+    <!-- Submit Button -->
+    <button class=" cursor-pointer border rounded" id="convert" type="submit">Convert</button>
+  </div>
+
+  <!-- Result Display -->
+  <h2>Result:</h2>
+  <p id="result">--</p>
+        
+    </div>
+
+    <script src="Temp.js" defer></script>
+</body>
+</html>
